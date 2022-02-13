@@ -1,17 +1,11 @@
+// import Product from "components/Product";
+// import List from "components/List";
+// import userInfo from "components/data";
+
+
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        textTransform: 'uppercase',
-        color: '#010101',
-      }}
-    >
-      React homework template
-    </div>
+    <></>
   );
 };

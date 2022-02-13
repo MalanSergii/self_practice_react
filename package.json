@@ -4,6 +4,9 @@
   "private": true,
   "homepage": "https://MalanSergii.github.io/self_practice_react/",
   "dependencies": {
+    "@emotion/css": "^11.7.1",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -36,5 +39,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.7.2",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
+    "prop-types": "^15.8.1"
   }
 }
