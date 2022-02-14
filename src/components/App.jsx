@@ -1,11 +1,10 @@
-// import Product from "components/Product";
-// import List from "components/List";
-// import userInfo from "components/data";
 
-
+import Counter from "./Counter";
 
 export const App = () => {
   return (
-    <></>
+    <>
+      <Counter step={4}/>
+    </>
   );
 };
