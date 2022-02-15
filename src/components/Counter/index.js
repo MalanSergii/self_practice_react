@@ -1,1 +1,1 @@
-export {default} from "components/Counter/Counter.jsx"
+export {default} from "./Counter.jsx"

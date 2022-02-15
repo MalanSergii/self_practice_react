@@ -1,34 +1,43 @@
-import React, { Component } from "react";
-// import ReactDOM from "react-dom";
+import React, { Component}from "react";
+import Controls from "components/Counter/Controls/Controls";
+import Value from "./Value/Value";
+import {CounterBox}from "./Counter.styled"
 
 class Counter extends Component {
-    
     static defaultProps = {
-    step: 1,
-    initialValue: 0,
-    };
+        initialValue:0
+    }
 
     state = {
-      value: this.props.initialValue,
-    };  
+        value: this.props.initialValue,
+        a: 4, 
+        b:7
+    };
 
+    handleIncrement = () => {
+        this.setState((prevState) => ({value: prevState.value + 1}));
 
-    test = () => { 
-        // this.setState({ value: 5 })
-        for (let i = 0; i < 3; i += 1) {
-            this.setState({ value: this.state.value + 1 });
-            console.log(this.state.value);
-        }
+    }
+    handleDecrement = () => {
+        this.setState((prevState) => {
+            return {
+                value:prevState.value -1
+            }
+        })
     }
 
     render() {
-      return (
-          <div>
-              <button onClick={this.test}>button</button>
-            <span>{this.state.value}</span>
-        </div>
-    )
-  }
+        const { value} = this.state;
+        return (
+            <CounterBox>
+                <Value value={value}/>
+                <Controls
+                    increment={this.handleIncrement}
+                    decrement={this.handleDecrement}
+                />
+            </CounterBox>
+        )
+    }
 }
 
 export default Counter;
